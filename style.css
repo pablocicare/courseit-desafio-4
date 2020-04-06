@@ -1,0 +1,113 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f7f6fb;
+    background: linear-gradient(45deg, #8356c9, #FFF);
+    padding: 30px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .square {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+}
+
+.square .text-left {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    max-width: 50%;
+    background-color: #fff;
+    padding: 60px 45px;
+}
+
+.text-left .logo {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+}
+
+.fa-gas-pump {
+    margin-right: 5px;
+    color: indianred;
+    font-size: 1.4rem;
+}
+
+.logo-text {
+    font-weight: bold;
+}
+
+.title {
+    font-size: 1.4em;
+    font-weight: 400;
+    color: #767676;
+    margin-bottom: 25px;
+}
+
+.buttons-redes {
+    display: flex;
+    margin: 0 -7.5px;
+}
+
+.button-facebook, .button-xing {
+    flex: 1 0 calc(50% - 15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 5px;
+    color: #FFF;
+    text-decoration: none;
+    transition:
+        transform 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
+    margin: 0 7.5px;
+}
+
+.button-facebook {
+    background-color: #425e9e;
+}
+
+.button-xing {
+    background-color: #245553;
+}
+
+.fa-xing, .fa-facebook {
+    margin-right: 5px;
+}
+
+.xing, .facebook {
+    font-size: 0.9rem;
+}
+
+.or {
+    display: block;
+      width: 100%;
+      text-align: center;
+      padding: 50px 0px;
+      color: #727272;
+}
+
+.image-right {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    background-image: url(https://images.unsplash.com/photo-1517504734587-2890819debab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=528) ;
+    background-position: center;
+    background-size: cover;
+}
