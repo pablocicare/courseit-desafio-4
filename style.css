@@ -5,11 +5,12 @@ body {
 }
 
 .content {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    /*altura minima de 100vh, si el contenido precisa ocupar más lugar puede crecer. La altura siempre deberia depender del contenido*/
     background-color: #f7f6fb;
     background: linear-gradient(45deg, #8356c9, #FFF);
-    padding: 30px 15px;
+    padding: 30px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,10 +18,13 @@ body {
 
 .content .square {
     width: 100%;
-    max-width: 800px;
+    max-width: 840px;
     display: flex;
     border-radius: 10px;
+    /*redondea los bordes del div square*/
     overflow: hidden;
+    /*define como se comporta el elemento cuando sus hijos son mas grandes que él. Sin esta propiedad no se veria redondeado el div
+    porque la imagen y el div text-left taparian el div padre. Con hidden lo que se sale del tamaño del div no lo muestra*/
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
 }
 
@@ -28,10 +32,13 @@ body {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: auto;
-    max-width: 50%;
+    width: 50%;
+    max-width: 38%;
     background-color: #fff;
     padding: 60px 45px;
 }
+
+/*aca se maneja el ancho de la mitad esta*/
 
 .text-left .logo {
     text-decoration: none;
@@ -66,6 +73,7 @@ body {
 
 .button-facebook, .button-xing {
     flex: 1 0 calc(50% - 15px);
+    /*Flex grow 1 (para que tenga permitido crecer) - flex shrink 0 flex basis: calc (el tamaño va a ser el 50% del padre menos 15px como para poder ponerle padding) */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,6 +85,7 @@ body {
         transform 0.3s ease-in-out,
         box-shadow 0.3s ease-in-out;
     margin: 0 7.5px;
+    width: 137.5px;
 }
 
 .button-facebook {
@@ -103,11 +112,90 @@ body {
       color: #727272;
 }
 
+.form-login .input-wrapper {
+    margin-bottom: 10px;
+}
+
+.form-login .label, .input {
+    display: block;
+    width: 100%;
+}
+
+.form-login .label {
+    padding-bottom: 3px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.form-login .input {
+    padding: 10px;
+    border: 0;
+    border-bottom: 1px solid;
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 30px;
+}
+
+.check-wrapper {
+    display: inline-flex;
+    align-items: center;
+}
+
+.checkbox {
+    margin-right: 5px;
+}
+
+.forgot {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.login-buttons .action {
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 1px solid #c7c7c7;
+    color: #333;
+    text-decoration: none;
+    background-color: #fff;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.login-buttons .login-button {
+    background: linear-gradient(
+        to right,
+        #8356c9,
+        #c650c1,
+        #e3b194);
+    border: 0;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.terms {
+    color: #666;
+      padding-top: 40px;
+      display: block;
+      line-height: 1.4rem;
+}
+
+.terms-link {
+    color: #4a89d8;
+    text-decoration: none;
+}
+
 .image-right {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: auto;
+    width: 50%;
     background-image: url(https://images.unsplash.com/photo-1517504734587-2890819debab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=528) ;
     background-position: center;
     background-size: cover;
+    /*cover asegura que la imagen siempre cubra la totalidad del contenedor. Mantiene la relación de aspecto y no deforma la imagen*/
 }
