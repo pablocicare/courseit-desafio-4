@@ -1,3 +1,10 @@
+* {
+    box-sizing: border-box;
+    /*border box sirve para que la caja no crezca mas de la medida que se le dió, si tiene padding, por ej,
+    el contenido va a ir hacia adentro en vez de crecer la caja*/
+}
+/*el asterisco como selector agarra todo lo que hay en html*/
+
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -33,7 +40,6 @@ body {
     flex-shrink: 0;
     flex-basis: auto;
     width: 50%;
-    max-width: 38%;
     background-color: #fff;
     padding: 60px 45px;
 }
